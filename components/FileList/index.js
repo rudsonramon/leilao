@@ -1,9 +1,9 @@
 import React from 'react'
-import { Container, FileInfo, Preview } from './style'
 import { CircularProgressbar } from 'react-circular-progressbar'
 import { MdCheckCircle, MdError, MdLink } from 'react-icons/md'
+import { Container, FileInfo, Preview } from './style'
 
-const FileList = ({ files }) => {
+const FileList = ({ files }) => (
   <Container>
     {files.map(uploadedFile => (
       <li key={uploadedFile.id}>
@@ -51,5 +51,5 @@ const FileList = ({ files }) => {
       </li>
     ))}
   </Container>
-}
+)
 export default FileList

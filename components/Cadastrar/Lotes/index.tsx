@@ -87,7 +87,7 @@ export default function index(props) {
   })
 
   const handleUpload = files => {
-    console.log(' VALIDAR A VARIAVEL ===>>>> ', files)
+    console.log(' VALIDAR A VARIAVEL FILES ===>>>> ', files)
     const uploadFiles = files.map(file => ({
       file,
       id: uniqueId(),
@@ -99,14 +99,17 @@ export default function index(props) {
       error: false,
       url: null,
     }))
+    console.log(' VALIDAR A VARIAVEL uploadedFiles ------>>>>> ', uploadedFiles)
     setState({
-      uploadedFiles: state.uploadedFiles.concat(uploadedFiles)
-      //uploadedFiles,
+      //uploadedFiles: state.uploadedFiles.concat(uploadedFiles)
+      uploadedFiles,
     })
   }
 
   const {uploadedFiles} = state
-  console.log(' VALIDAR A VARIAVEL uploadedFiles --->> ', uploadedFiles)
+  //console.log(' VALIDAR A VARIAVEL uploadedFiles --->> ', uploadedFiles)
+  //console.log(' VALIDAR A VARIAVEL uploadedFiles --->> ', uploadedFiles)
+  //console.log(' VALIDAR A VARIAVEL state --->> ', state)
 
   return (
     <Formik
